@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    tools:ignore="Orientation">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:title="Registrasi Mahasiswa"
+        android:theme="?attr/actionBarTheme" />
+
+    <RelativeLayout
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvPendaftaran"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No. Pendaftaran"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:id="@+id/etPendaftaran"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvPendaftaran"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="50dp"
+            android:inputType="textPersonName"
+            android:text=""
+            tools:ignore="Autofill,LabelFor,RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/tvNama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etPendaftaran"
+            android:text="Nama"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:id="@+id/etNama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvNama"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="50dp"
+            android:inputType="textPersonName"
+            android:text=""
+            tools:ignore="Autofill,LabelFor,RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/tvKelamin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etNama"
+            android:text="Jenis Kelamin"
+            tools:ignore="HardcodedText" />
+
+        <RadioGroup
+            android:id="@+id/rbGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvKelamin"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbLaki"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="Laki-Laki"
+                tools:ignore="HardcodedText" />
+
+            <RadioButton
+                android:id="@+id/rbPerempuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Perempuan"
+                tools:ignore="HardcodedText" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_below="@+id/rbGroup"
+            android:layout_width="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_height="wrap_content"
+            android:weightSum="3"
+            android:orientation="horizontal"
+            tools:ignore="RtlHardcoded">
+
+            <TextView
+                android:id="@+id/tvAgama"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:text="Agama"
+                tools:ignore="HardcodedText" />
+
+            <Spinner
+                android:id="@+id/spAgama"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvAlamat"
+            android:layout_width="150dp"
+            android:layout_below="@+id/linearLayout"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_marginTop="25dp"
+            android:textColor="#000"
+            android:text="Alamat"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:id="@+id/etAlamat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/tvAlamat"
+            android:ems="15"
+            android:inputType="textPersonName"
+            android:text=""
+            tools:ignore="Autofill,LabelFor" />
+
+        <TextView
+            android:id="@+id/tvTelp"
+            android:layout_below="@+id/etAlamat"
+            android:layout_marginTop="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:text="No. Telepon"
+            tools:ignore="HardcodedText" />
+
+        <EditText
+            android:id="@+id/etTelp"
+            android:layout_below="@+id/tvTelp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="15"
+            android:inputType="number"
+            android:text=""
+            tools:ignore="Autofill,LabelFor" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:text="clear"
+            android:id="@+id/btClear"
+            android:layout_below="@+id/etTelp"
+            android:layout_marginTop="25dp"
+            android:layout_height="wrap_content"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:text="submit"
+            android:id="@+id/btSubmit"
+            android:layout_toRightOf="@id/btClear"
+            android:layout_marginLeft="200dp"
+            android:layout_below="@+id/etTelp"
+            android:layout_marginTop="25dp"
+            android:layout_height="wrap_content"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+    </RelativeLayout>
+
+</LinearLayout>
